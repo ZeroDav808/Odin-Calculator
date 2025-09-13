@@ -37,3 +37,19 @@ function operate(operand1, operand2, operation){
     }
 }
 
+function handleClick(e){
+    const value = e.target;
+
+    switch(value.className){
+        case 'number':
+            console.log(value.textContent);
+            display.textContent = value.textContent;
+            break;
+            
+    }
+}
+
+const container = document.querySelector('#button-container');
+const display = document.querySelector('#display-container');
+
+container.addEventListener('click', handleClick);
