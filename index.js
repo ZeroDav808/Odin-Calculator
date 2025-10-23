@@ -71,8 +71,18 @@ function handleNumber(value){
 }
 
 function handleOperation(value){
-    values.operation = value;
-    display.textContent = '';
+    const op = value;
+
+    if(values.num1 && values.num2 && values.operation){
+       values.result = operate(+values.num1, +values.num2, values.operation);
+       values.num1 = values.result;
+       values.num2 = null;
+       values.operation  = op;
+       display.textContent = values.num1;
+       return;
+    }
+
+    values.operation = op;
 }
 
 function handleEqual(){
