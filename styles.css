@@ -28,11 +28,16 @@ button {
 }
 
 .calculator-display {
+    font-size: 24px;
     height: 100px;
     width: 220px;
     border: 1px solid darkgray;
     border-radius: 12px;
     background-color: lightgray;
+    padding-right: 10px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
 }
 
 .calculator-body {

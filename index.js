@@ -38,3 +38,10 @@ function operate(num1, num2, operation){
             return 'Invalid Operation! Could not complete computation!';
     }
 }
+
+const btnContainer = document.querySelector('.calculator-body');
+const display = document.querySelector('.calculator-display');
+
+btnContainer.addEventListener('click', (e)=>{
+    display.textContent = e.target.textContent;
+})
